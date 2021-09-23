@@ -1,7 +1,8 @@
 from fastapi import FastAPI
+
 from core.config import settings
+from db.base import Base
 from db.session import engine
-from db.base_class import Base
 
 
 def create_tables():
@@ -19,5 +20,5 @@ app = start_app()
 
 
 @app.get("/")
-def hello():
-    return {"detail": "World World"}
+def hello(name):
+    return {"detail": f"World ! {name}"}

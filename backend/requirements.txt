@@ -3,6 +3,9 @@ uvicorn
 # for database
 psycopg2==2.9.1
 sqlalchemy==1.4.23
-
-# for end
+# for env
 python-dotenv==0.19.0
+# Data Valadition
+pydantic[email]
+# Hashing
+passlib[bcrypt]
